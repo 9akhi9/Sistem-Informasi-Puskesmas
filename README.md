@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistem Informasi Puskesmas
 
 Sistem Informasi Puskesmas mengolah data pasien, dokter, obat, resep, rawat jalan, rekam medis, jadwal dokter, berita, serta dengan laporan harian, bulanan, rentang tanggal dan semua. Sistem ini dirancang dengan menggunakan php native & jQuery. data penyimpanan menggunakan MySQL. Sistem ini tidaklah sempurna, diharapkan jika ada berkenan untuk mengembangkan lagi.
@@ -72,3 +73,7 @@ define('DB_DATABASE', ''); # Sesuaikan dengan nama database
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', ''); # Jika menggunakan password, wajib diisi
 ```
+=======
+# Sistem-Informasi-Puskesmas
+web sistem informasi kesehatan
+>>>>>>> 7ad9aa8471a842f2fb25f562dddafcf71bb8bec5
