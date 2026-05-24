@@ -1,0 +1,72 @@
+/* admin.css */
+.admin-body { display: flex; min-height: 100vh; background: #f1f5f9; font-family: Arial, Helvetica, sans-serif; }
+
+.admin-sidebar { width: 240px; background: #0d1b14; color: #fff; display: flex; flex-direction: column; position: fixed; top: 0; left: 0; height: 100vh; z-index: 50; }
+.sidebar-brand { padding: 20px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.sidebar-nav { flex: 1; padding: 12px; overflow-y: auto; }
+.sidebar-nav a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px; text-decoration: none; color: rgba(255,255,255,0.6); font-size: 0.875rem; font-weight: 500; margin-bottom: 3px; transition: all 0.2s; }
+.sidebar-nav a:hover, .sidebar-nav a.aktif { background: rgba(26,138,94,0.3); color: #fff; }
+.sidebar-bawah { padding: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+.sidebar-bawah a { display: block; text-align: center; padding: 7px; font-size: 0.8rem; color: rgba(255,255,255,0.5); text-decoration: none; }
+.sidebar-bawah a:hover { color: #fff; }
+
+.admin-konten { margin-left: 240px; flex: 1; display: flex; flex-direction: column; }
+.admin-topbar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 40; }
+.topbar-info { font-size: 0.85rem; color: #64748b; }
+.topbar-pengguna { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; font-weight: 600; }
+.topbar-avatar { width: 34px; height: 34px; background: #1a8a5e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; }
+
+.admin-utama { padding: 24px; }
+.admin-judul { font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; }
+.admin-page-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.badge-jumlah { background: #e2e8f0; color: #64748b; border-radius: 100px; padding: 3px 10px; font-size: 0.75rem; font-weight: 700; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; margin-bottom: 24px; }
+.stat-kartu { background: #fff; border-radius: 12px; padding: 18px 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+.stat-kartu p  { font-size: 0.78rem; color: #64748b; margin-bottom: 4px; }
+.stat-kartu h2 { font-size: 1.8rem; font-weight: 800; }
+.stat-kartu.biru   h2 { color: #1d4ed8; }
+.stat-kartu.oranye h2 { color: #b45309; }
+.stat-kartu.biru2  h2 { color: #0369a1; }
+.stat-kartu.hijau  h2 { color: #065f46; }
+.stat-kartu.merah  h2 { color: #be123c; }
+
+.dash-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.admin-kartu { background: #fff; border-radius: 14px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); overflow: hidden; margin-bottom: 16px; }
+.kartu-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid #f1f5f9; }
+.kartu-header h3 { font-size: 1rem; font-weight: 700; }
+
+.tabel-scroll { overflow-x: auto; }
+.admin-tabel { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.admin-tabel th { background: #f8fafc; padding: 10px 14px; text-align: left; font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; }
+.admin-tabel td { padding: 11px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.admin-tabel tr:last-child td { border-bottom: none; }
+.admin-tabel tr:hover td { background: #f8fafc; }
+.admin-tabel code  { font-size: 0.75rem; background: #f1f5f9; padding: 2px 7px; border-radius: 4px; }
+.admin-tabel small { display: block; color: #94a3b8; font-size: 0.75rem; }
+
+.poli-bar-list { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.poli-bar-baris { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; }
+.poli-bar-baris > span { flex: 0 0 120px; font-size: 0.8rem; font-weight: 500; }
+.poli-bar-track { flex: 1; height: 8px; background: #f1f5f9; border-radius: 100px; overflow: hidden; }
+.poli-bar-isi   { height: 100%; background: #1a8a5e; border-radius: 100px; }
+.poli-bar-baris > strong { flex: 0 0 28px; text-align: right; font-size: 0.9rem; color: #1a8a5e; }
+
+.form-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.form-filter input, .form-filter select { padding: 7px 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.875rem; font-family: inherit; outline: none; }
+.form-filter input:focus, .form-filter select:focus { border-color: #1a8a5e; }
+
+.status-pilih { padding: 4px 8px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; border: none; cursor: pointer; }
+.status-pilih.status-menunggu     { background: #fef3c7; color: #b45309; }
+.status-pilih.status-dikonfirmasi { background: #dbeafe; color: #1d4ed8; }
+.status-pilih.status-selesai      { background: #d1fae5; color: #065f46; }
+.status-pilih.status-dibatalkan   { background: #fee2e2; color: #b91c1c; }
+.tombol-hapus { background: #ef4444; color: #fff; border-color: #ef4444; }
+
+.paginasi { display: flex; gap: 6px; justify-content: center; margin-top: 16px; }
+.paginasi-tombol { padding: 6px 14px; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; font-size: 0.875rem; color: #64748b; transition: all 0.2s; }
+.paginasi-tombol:hover { border-color: #1a8a5e; color: #1a8a5e; }
+.paginasi-tombol.aktif { background: #1a8a5e; border-color: #1a8a5e; color: #fff; }
+
+@media (max-width: 1100px) { .stat-grid { grid-template-columns: repeat(3,1fr); } .dash-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px)  { .admin-sidebar { transform: translateX(-100%); } .admin-konten { margin-left: 0; } .stat-grid { grid-template-columns: 1fr 1fr; } }
